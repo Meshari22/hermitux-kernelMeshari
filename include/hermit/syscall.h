@@ -214,6 +214,9 @@ int sys_newfstatat(int dirfd, const char *name, struct stat *buf, int flag);
 int sys_poll(struct pollfd *ufds, unsigned int nfds, int timeout_msecs);
 int sys_getrandom(void *buf, unsigned long int buflen, unsigned int flags);
 int sys_rseq(void *rseq, unsigned int rseq_len, int flags, unsigned int sig);
+int sys_truncate(const char *path, off_t length);
+int sys_ftruncate(int fd, off_t length);
+
 
 struct ucontext;
 typedef struct ucontext ucontext_t;
